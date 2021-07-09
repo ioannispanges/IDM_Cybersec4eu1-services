@@ -3,7 +3,7 @@ import { loadUser } from "redux-oidc";
 import { routerMiddleware } from 'react-router-redux';
 import reducer from '../reducer/index';
 import { userManager, userManagerOlympus } from "../utils/userManager";
-import { browserHistory } from 'react-router';
+import { browserHistory , hashHistory} from 'react-router';
 
 const loggerMiddleware = (store) => (next) => (action) => {
   console.log("Action type:", action.type);
@@ -16,7 +16,7 @@ const initialState = {};
 
 const createStoreWithMiddleware = compose(
   applyMiddleware(loggerMiddleware,
-    routerMiddleware(browserHistory))
+    routerMiddleware(browserHistory,hashHistory))
 )(createStore);
 
 const store = createStoreWithMiddleware(reducer, initialState);

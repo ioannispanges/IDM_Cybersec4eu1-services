@@ -11,11 +11,14 @@ import { MuiThemeProvider } from "material-ui/styles";
 
 function App() {
   return (
+
     <Container>
         <MuiThemeProvider theme={theme}>
           <Paper>
             <OidcProvider store={store} userManager={userManager}>
+
               <Root>
+
                 <Routes />
               </Root>
             </OidcProvider>

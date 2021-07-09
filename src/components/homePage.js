@@ -4,6 +4,7 @@ import LoginPage from "./loginPage";
 import MainPage from "./mainPage";
 
 function HomePage(props) {
+  // alert('homepage');
   const { user } = props;
   return !user ? <LoginPage /> : <MainPage />;
 }

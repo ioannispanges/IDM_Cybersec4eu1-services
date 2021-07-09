@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { push } from "react-router-redux";
-import FrontPage from "../components/frontPage";
+import FrontPage from "./frontPage";
 
 import { userManager, userManagerOlympus } from "../utils/userManager";
+import {TextField} from "@material-ui/core";
 
 class MainPage extends React.Component {
 
@@ -24,37 +25,55 @@ class MainPage extends React.Component {
         // Failed to validate age check
         if(!over18) {
             // alert("under 18, sending back to front");
-            alert("Issuance valid!")
+            alert("Failed valid!")
             return <FrontPage />
         }
 
         return (
             <div style={styles.root}>
                 <div style={styles.title}>
-                    <img src="uoi.png"/>
+                    <img src="k.png"/>
 
-                    <h3>Welcome, {user ? user.profile.name : "Mister Unknown"}!</h3>
-                    Issuance Ok !<br/>
+                    <h4>FullName: {user ? user.profile.name : "Mister Unknown"}</h4>
+                    {/*Issuance Ok !<br/>*/}
                     {/*A reservation has been made in your name!*/}
-                    <h4>Username: {user ? user.profile.sub : "Subname"}</h4>
+
+                    {/*<h4>Username: {user ? user.profile.sub : "Subname"}</h4>*/}
                     <h4>Birthdate: {user ? user.profile.birthdate : "Birth"}</h4>
                     <h4>University: {user ? user.profile.university : "University"}</h4>
-                    <h4>Student Id: {user ? user.profile.studentid : "Student Id"}</h4>
-                    <h4>Course: {user ? user.profile.course : "Course"}</h4>
+                    {/*<h4>Student Id: {user ? user.profile.studentid : "Student Id"}</h4>*/}
+                    {/*<h4>Course: {user ? user.profile.course : "Course"}</h4>*/}
 
                 </div>
+
                 <button
                     onClick={event => {
                         event.preventDefault();
-                        userManager.signinRedirect();
-                        userManagerOlympus.signinRedirect();
-                        this.props.dispatch(push("/"));
+                        userManager.getUser();
+                         userManagerOlympus.storeUser();
+                       this.props.dispatch(push("/storage"));
+                       // window.open("/storage", "_blank");
+
+                    }
+                    }
+
+                >
+                    Get your Credential
+
+                </button>
+                <button
+                    onClick={event => {
+                        userManager.removeUser();
+                        userManagerOlympus.removeUser();
+                        this.props.dispatch(push("/login"));
                     }}
                 >
                     Logout
+
                 </button>
 
             </div>
+
         );
     }
 }

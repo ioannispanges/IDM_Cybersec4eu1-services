@@ -13,8 +13,8 @@ class CallbackPageOL extends React.Component {
                     userManager={userManagerOlympus}
 
                     successCallback={user => {
-                        console.log(user)
-                        alert("You are going to issuance your Name: "+user.profile.name+ "from the university : "+user.profile.university+"with student id: "+ user.profile.studentid)
+                        // console.log(user)
+                        alert("You are going to reveal your Full Name: "+user.profile.name+ "from the university : "+user.profile.university+"with student id: "+ user.profile.studentid)
 
                         this.props.dispatch({
                             type: USER_FOUND,

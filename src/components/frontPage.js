@@ -12,12 +12,11 @@ class FrontPage extends React.Component {
             <div style={styles.root}>
                 <div style={styles.title}>
                     <h3>Welcome to the University of Ioannina Issuer </h3>
-                    <img src="uoi.png"/>
+                    <img src="k.png"/>
 
                 </div>
                 To order, a certification , please login using the button bellow:
                 <Button
-
                 size="small"
                 variant="outlined"
                     // startIcon={<DirectionsIcon />}

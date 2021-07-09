@@ -14,7 +14,7 @@ class CallbackPageKC extends React.Component {
 
                     successCallback={user => {
                         console.log(user)
-                        alert("you're logged in as "  +user.profile.sub)
+                        ("you're logged in as "  +user.profile.sub)
                         this.props.dispatch({
                             type: USER_FOUND,
                             payload: user

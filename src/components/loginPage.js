@@ -17,21 +17,21 @@ class LoginPage extends React.Component {
   render() {
     return (
       <Box style={styles.root}>
-        <Button
-          size="large"
-          variant="outlined"
-          startIcon={<DirectionsIcon />}
-          onClick={this.onLoginClick}
-        >
-          Connect with KeyCloak
-        </Button>
+        {/*<Button*/}
+        {/*  size="large"*/}
+        {/*  variant="outlined"*/}
+        {/*  startIcon={<DirectionsIcon />}*/}
+        {/*  onClick={this.onLoginClick}*/}
+        {/*>*/}
+        {/*  Connect with KeyCloak*/}
+        {/*</Button>*/}
         <Button
           size="large"
           variant="outlined"
           startIcon={<DirectionsIcon />}
           onClick={this.onLoginClickOlympus}
         >
-          Connect with University of Ioannina Credential System
+         Login with University of Ioannina Credential System
         </Button>
       </Box>
     );
