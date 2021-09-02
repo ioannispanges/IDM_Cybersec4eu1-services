@@ -9,4 +9,3 @@ To run the project run > npm start
 
 This will start the credentials' website on localhost:3000, and run crypto in the pABC verifier on localhost:3030.
 
-(can be accessed through the webserver endpoints on localhost:3000 or https://localhost:3001).
