@@ -26,5 +26,4 @@ const olympusUserManagerConfig = {
 
 const userManager = createUserManager(userManagerConfig);
 const userManagerOlympus = createUserManager(olympusUserManagerConfig);
-
 export {userManager, userManagerOlympus};

@@ -11,8 +11,8 @@ class FrontPage extends React.Component {
         return (
             <div style={styles.root}>
                 <div style={styles.title}>
-                    <h3>Welcome to the University of Ioannina Issuer </h3>
-                    <img src="k.png"/>
+                    <h3>University of Ioannina Issuer </h3>
+                    <img src="cybersecuoi.png" width="250" height="160"/>
 
                 </div>
                 To order, a certification , please login using the button bellow:

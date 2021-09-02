@@ -3,9 +3,10 @@ import { connect } from "react-redux";
 import { CallbackComponent, USER_FOUND } from "redux-oidc";
 import { push } from "react-router-redux";
 import { userManagerOlympus } from "../utils/userManager";
+import swal from 'sweetalert';
 
 class CallbackPageOL extends React.Component {
-    render() {
+    render(message) {
         // just redirect to '/' in both cases
         return (
             <div>
@@ -14,7 +15,8 @@ class CallbackPageOL extends React.Component {
 
                     successCallback={user => {
                         // console.log(user)
-                        alert("You are going to reveal your Full Name: "+user.profile.name+ "from the university : "+user.profile.university+"with student id: "+ user.profile.studentid)
+                        //  alert("Your account has been successfully registered Full Name: "+user.profile.name+ "from the university : "+user.profile.university+"with student id: "+ user.profile.studentid)
+                         window.alert("Your account has been successfully registered ")
 
                         this.props.dispatch({
                             type: USER_FOUND,

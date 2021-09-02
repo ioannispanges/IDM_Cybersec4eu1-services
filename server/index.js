@@ -34,17 +34,17 @@ setTimeout(() => {
 
 var basePolicy = {
 	"predicates": [{
-		"attributeName": "https://olympus-example-use-case.org/attributes/FamilyName",
+		"attributeName": "https://olympus-example-use-case.org/attributes/Name",
 		"operation": "REVEAL"
 	}, {
-		"attributeName": "https://olympus-example-use-case.org/attributes/VaccinationDate",
+		"attributeName": "https://olympus-example-use-case.org/attributes/DateofBirth",
 		"operation": "LESSTHANOREQUAL",
 		"value": {
 			"attr": 1622505600000,
 			"type": "DATE"
 		}
 	}],
-	"policyId": "RandomId"}
+	"policyId": "c368dd0e2db04cd6ba4ae2d5809774aa"}
 
 router.get('/getpolicy', function(req, res, next) {
 	var result=generatePolicy();

@@ -2,7 +2,6 @@ import { Box, Button } from "@material-ui/core";
 import DirectionsIcon from '@material-ui/icons/Directions';
 import React from "react";
 import { userManager,userManagerOlympus } from "../utils/userManager";
-
 class LoginPage extends React.Component {
 
   onLoginClick(event) {
